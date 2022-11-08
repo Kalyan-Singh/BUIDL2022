@@ -24,6 +24,7 @@ import CreateAListing from "./components/CreateAListing";
 import LensHome from "./components/Lens/LensHome";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import CreateAGuide2 from "./components/CreateAGuide2";
 
 const darkTheme_MUI = createTheme({
   palette: {
@@ -67,7 +68,7 @@ function App() {
           <Route path="/details" element={<Details></Details>}></Route>
           <Route
             path="/CreateAGuide"
-            element={<CreateAGuide></CreateAGuide>}
+            element={<CreateAGuide2></CreateAGuide2>}
           ></Route>
           <Route path="/MyGuides" element={<MyGuides></MyGuides>}></Route>
           <Route path="/Market" element={<Market></Market>}></Route>

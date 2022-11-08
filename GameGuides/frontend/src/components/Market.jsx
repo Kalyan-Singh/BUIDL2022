@@ -3,7 +3,7 @@ import axios from "axios";
 import { useContractRead } from "wagmi";
 import { ggMarket, abi_ggMarket } from "./Contract_addr";
 import { ethers } from "ethers";
-import { Backdrop, Box, CircularProgress } from "@mui/material";
+import { Backdrop, Box, CircularProgress,Stack } from "@mui/material";
 import GetCard from "./GetCard";
 
 function Market() {
@@ -51,7 +51,7 @@ function Market() {
   } else {
     return (
       <>
-        <Box>
+        <Stack direction="row" spacing="15px">
           {listings.map((listing) => {
             return (
               <GetCard
@@ -62,7 +62,7 @@ function Market() {
               ></GetCard>
             );
           })}
-        </Box>
+        </Stack>
       </>
     );
   }
